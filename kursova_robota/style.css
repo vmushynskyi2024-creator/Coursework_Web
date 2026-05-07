@@ -1,0 +1,588 @@
+/* Базові налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --bg-dark: #0a0a0a;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --primary-purple: #5c33ff;
+    --accent-blue: #3355ff;
+    --btn-dark: #1a1b26;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.round-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Шапка сайту */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 1px solid #222;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-purple);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: var(--primary-purple);
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Головний блок (Hero) */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5%;
+    min-height: 60vh;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.badge {
+    background-color: #2a1b54;
+    color: #a385ff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 10px 0 20px 0;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--primary-purple);
+    font-family: cursive;
+}
+
+.hero p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-dark {
+    background-color: var(--btn-dark);
+    color: #fff;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-game-card {
+    width: 100%;
+    max-width: 500px;
+    height: 320px;
+    background-color: #222; /* Фоновий колір, якщо картинка не завантажиться */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    border-bottom: 5px solid var(--primary-purple);
+    overflow: hidden;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.rating {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.game-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.scroll-container {
+    text-align: center;
+    margin: 20px 0 50px 0;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #222;
+}
+
+/* Останні огляди на головній */
+.more-games {
+    padding: 20px 5% 60px;
+}
+
+.more-games h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.latest-review-card {
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #222;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: #222; /* Якщо немає картинки */
+    background-size: cover;
+    background-position: center;
+}
+
+.latest-review-text {
+    padding: 15px;
+}
+
+.latest-review-text h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.latest-review-text p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Сторінка Оглядів (reviews.html) */
+.page-content {
+    padding: 50px 5%;
+}
+
+.page-content h1 {
+    margin-bottom: 40px;
+}
+
+.review-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.full-review-card {
+    position: relative;
+    height: 350px;
+    background-color: #222;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-bottom: 4px solid var(--primary-purple);
+    transition: transform 0.3s;
+}
+
+.full-review-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 60%, transparent 100%);
+}
+
+.card-gradient-overlay .card-rating {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.card-gradient-overlay .card-title {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.card-gradient-overlay .card-desc {
+    font-size: 0.9rem;
+    color: #ddd;
+    line-height: 1.4;
+}
+
+/* === сторінка "Про проєкт" (about.html) === */
+.project-info-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0 60px 0;
+}
+
+/* Ліва колонка */
+.student-profile {
+    flex: 1;
+    min-width: 300px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    height: fit-content;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid var(--primary-purple);
+    background-color: #222;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.student-profile h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.role {
+    color: var(--primary-purple);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.student-details {
+    text-align: left;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.student-details p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.student-details p:last-child {
+    margin-bottom: 0;
+}
+
+.github-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 0;
+}
+
+/* Права колонка */
+.project-details {
+    flex: 2;
+}
+
+.project-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 15px;
+}
+
+.info-block {
+    margin-bottom: 35px;
+}
+
+.info-block h3 {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.highlight-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--accent-blue);
+}
+
+.info-block p {
+    color: #ddd;
+    line-height: 1.8;
+}
+
+.tech-stack {
+    list-style: none;
+}
+
+.tech-stack li {
+    background: #111;
+    border-left: 4px solid var(--primary-purple);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 0 10px 10px 0;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.tech-title {
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+/* Додаткова адаптація для About сторінки */
+@media (max-width: 900px) {
+    .project-info-container {
+        flex-direction: column;
+    }
+    
+    .student-profile {
+        min-width: 100%;
+    }
+}
+/* Розсилка */
+.newsletter {
+    text-align: center;
+    padding: 60px 5%;
+    background: #0d0d0d;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+}
+
+.highlight-blue {
+    color: var(--accent-blue);
+}
+
+.subscribe-form {
+    margin: 30px auto;
+    max-width: 500px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.subscribe-form input {
+    padding: 15px;
+    border-radius: 25px;
+    border: 1px solid #333;
+    background: transparent;
+    color: #fff;
+    width: 60%;
+}
+
+.btn-blue {
+    background-color: var(--accent-blue);
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Підвал */
+footer {
+    border-top: 1px solid #222;
+    padding: 50px 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-info {
+    max-width: 300px;
+}
+
+.social-links {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.link-column a {
+    display: block;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Анімації JS */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* АДАПТАЦІЯ ПІД МОБІЛКИ */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-buttons a {
+        margin-right: 0;
+    }
+
+    .main-game-card {
+        margin-top: 40px;
+        height: 250px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+    }
+
+    .subscribe-form input, .btn-blue {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .about-card {
+        padding: 30px 20px;
+    }
+}

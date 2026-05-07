@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAY & FUN | Головна</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Play & Fun Logo" class="round-logo"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="reviews.html">Огляди</a>
+            <a href="#">Новини</a>
+            <a href="#">Гайди</a>
+            <a href="#">Залізо</a>
+        </nav>
+        <div class="nav-actions">
+            <span class="search-icon">🔍</span>
+            <a href="#" class="btn-primary">Увійти</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content fade-in">
+                <span class="badge">ВИБІР РЕДАКЦІЇ</span>
+                <h1>МАЙБУТНЄ<br><span class="highlight">ГЕЙМІНГУ</span> ВЖЕ ТУТ.</h1>
+                <p>Глибоке занурення у світи, що мають значення. Ми не просто граємо в ігри; ми розбираємо їх на деталі. Приєднуйся до еліти критиків та ентузіастів.</p>
+                <div class="hero-buttons">
+                    <a href="reviews.html" class="btn-white">Читати огляд ➔</a>
+                    <a href="#" class="btn-dark">▶ Дивитись трейлер</a>
+                </div>
+            </div>
+            
+            <div class="hero-image fade-in">
+                <div class="main-game-card" style="background-image: url('images/cyberpunk.jpg');">
+                    <div class="card-overlay">
+                        <div class="rating">★ 9.8</div>
+                        <div class="game-title">Cyberpunk 2077: Phantom Liberty</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="scroll-container">
+            <button id="scrollBtn" class="btn-outline">Завантажити ще огляди ↓</button>
+        </div>
+
+        <section id="more-reviews" class="more-games">
+            <h2 class="fade-in">Останні огляди</h2>
+            <div class="games-grid">
+                
+                <div class="latest-review-card fade-in">
+                    <div class="img-placeholder" style="background-image: url('images/The_Witcher.jpg');"></div>
+                    <div class="latest-review-text">
+                        <h3>Відьмак 3: Дикий Гін (Next-Gen)</h3>
+                        <p>Оновлена класика з неймовірною графікою.</p>
+                    </div>
+                </div>
+                
+                <div class="latest-review-card fade-in">
+                    <div class="img-placeholder" style="background-image: url('images/STALKER_2.jpg');"></div>
+                    <div class="latest-review-text">
+                        <h3>S.T.A.L.K.E.R. 2: Серце Чорнобиля</h3>
+                        <p>Наймасштабніше повернення в Зону. Попередній погляд.</p>
+                    </div>
+                </div>
+                
+                <div class="latest-review-card fade-in">
+                    <div class="img-placeholder" style="background-image: url('images/Baldurs_Gate_III.png');"></div>
+                    <div class="latest-review-text">
+                        <h3>Baldur's Gate 3</h3>
+                        <p>Гра року, яка перевернула жанр RPG.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="newsletter fade-in">
+            <h2>Не пропусти жодного <span class="highlight-blue">кадру.</span></h2>
+            <p>Підпишись на нашу щотижневу розсилку з найважливішими оглядами, витоками індустрії та бенчмарками заліза прямо на твій ПК.</p>
+            <form class="subscribe-form" onsubmit="event.preventDefault();">
+                <input type="email" placeholder="Введіть ваш email" required>
+                <button type="submit" class="btn-blue">Приєднатись<br>PLAY&FUN</button>
+            </form>
+            <small>Приєднуючись, ви погоджуєтесь з Умовами. Без спаму, тільки чисті дані.</small>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <img src="images/logo.png" alt="Play & Fun" class="round-logo" style="margin-bottom: 15px;">
+                <p>Остаточне джерело для глибокого аналізу ігор та технічних оглядів. Створено для гравців, які вимагають більшого від свого медіа.</p>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="https://classroom.google.com/h" target="_blank" title="Мій Classroom">Classroom</a>
+                    <a href="https://github.com/vmushynskyi2024-creator" target="_blank">GitHub</a>
+                    <a href="#">Email</a>
+                </div>
+                <small>Vasyl Mushynskyi Company</small>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>ПЛАТФОРМИ</h4>
+                    <a href="#">PC Gaming</a>
+                    <a href="#">PlayStation</a>
+                    <a href="#">Xbox</a>
+                    <a href="#">Nintendo</a>
+                </div>
+                <div class="link-column">
+                    <h4>ПРО ПРОЄКТ</h4>
+                    <a href="about.html">Про мій проєкт</a>
+                    <a href="#">Політика конфіденційності</a>
+                    <a href="#">Умови використання</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
