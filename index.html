@@ -47,38 +47,44 @@
             </div>
         </section>
 
-        <div class="scroll-container">
+      <div class="scroll-container">
             <button id="scrollBtn" class="btn-outline">Завантажити ще огляди ↓</button>
         </div>
 
         <section id="more-reviews" class="more-games">
             <h2 class="fade-in">Останні огляди</h2>
-            <div class="games-grid">
-                
-                <div class="latest-review-card fade-in">
-                    <div class="img-placeholder" style="background-image: url('images/The_Witcher.jpg');"></div>
-                    <div class="latest-review-text">
-                        <h3>Відьмак 3: Дикий Гін (Next-Gen)</h3>
-                        <p>Оновлена класика з неймовірною графікою.</p>
+            
+            <div class="latest-carousel-wrapper fade-in">
+                <div class="latest-carousel-track" id="latestCarouselTrack">
+                    
+                    <div class="latest-review-card">
+                        <div class="img-placeholder" style="background-image: url('images/The_Witcher.jpg');"></div>
+                        <div class="latest-review-text">
+                            <h3>Відьмак 3: Дикий Гін (Next-Gen)</h3>
+                            <p>Оновлена класика з неймовірною графікою.</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="latest-review-card fade-in">
-                    <div class="img-placeholder" style="background-image: url('images/STALKER_2.jpg');"></div>
-                    <div class="latest-review-text">
-                        <h3>S.T.A.L.K.E.R. 2: Серце Чорнобиля</h3>
-                        <p>Наймасштабніше повернення в Зону. Попередній погляд.</p>
+                    
+                    <div class="latest-review-card">
+                        <div class="img-placeholder" style="background-image: url('images/STALKER_2.jpg');"></div>
+                        <div class="latest-review-text">
+                            <h3>S.T.A.L.K.E.R. 2: Серце Чорнобиля</h3>
+                            <p>Наймасштабніше повернення в Зону. Попередній погляд.</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="latest-review-card fade-in">
-                    <div class="img-placeholder" style="background-image: url('images/Baldurs_Gate_III.png');"></div>
-                    <div class="latest-review-text">
-                        <h3>Baldur's Gate 3</h3>
-                        <p>Гра року, яка перевернула жанр RPG.</p>
+                    
+                    <div class="latest-review-card">
+                        <div class="img-placeholder" style="background-image: url('images/Baldurs_Gate_III.png');"></div>
+                        <div class="latest-review-text">
+                            <h3>Baldur's Gate 3</h3>
+                            <p>Гра року, яка перевернула жанр RPG.</p>
+                        </div>
                     </div>
+
                 </div>
 
+                <div class="carousel-click-zone zone-left" id="zoneLeft"></div>
+                <div class="carousel-click-zone zone-right" id="zoneRight"></div>
             </div>
         </section>
 

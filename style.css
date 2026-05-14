@@ -197,6 +197,44 @@ a {
     margin-bottom: 30px;
     text-align: center;
 }
+.latest-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.latest-carousel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.latest-carousel-track .latest-review-card {
+    min-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.carousel-click-zone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.zone-left {
+    left: 0;
+}
+
+.zone-right {
+    right: 0;
+}
 
 .games-grid {
     display: grid;
@@ -232,6 +270,33 @@ a {
     font-size: 0.9rem;
     color: var(--text-muted);
 }
+    .slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 400px;
+    margin: 0 auto;
+    }
+    .slide {
+    display: none;
+    text-align: center;
+    }
+    .slide.active {
+    display: block;
+    }
+    .slider-controls {
+    text-align: center;
+    margin-top: 15px;
+    }
+    .slider-controls button {
+    background: var(--btn-dark);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+
 
 /* Сторінка Оглядів (reviews.html) */
 .page-content {
