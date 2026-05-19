@@ -66,3 +66,91 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', slideCarousel);
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    // Ефект появи для елементів
+    const faders = document.querySelectorAll('.fade-in');
+    faders.forEach(fader => {
+        fader.style.opacity = '1';
+    });
+
+    createHeader();
+});
+
+function createHeader() {
+    const container = document.getElementById('header-container');
+    if (!container) return;
+
+    // Створюємо основну шапку
+    const header = document.createElement('header');
+    header.className = 'main-header';
+
+    // Ліва частина: Навігація
+    const nav = document.createElement('nav');
+    nav.className = 'desktop-menu';
+    const link1 = document.createElement('a');
+    link1.href = '#';
+    link1.textContent = 'НОВИНИ';
+    const link2 = document.createElement('a');
+    link2.href = 'reviews.html';
+    link2.textContent = 'ОГЛЯДИ';
+    nav.appendChild(link1);
+    nav.appendChild(link2);
+
+    // Центральна частина: Логотип
+    const logoDiv = document.createElement('div');
+    logoDiv.className = 'logo';
+    logoDiv.textContent = 'PLAY & FUN';
+
+    // Права частина: Пошук та Увійти
+    const actions = document.createElement('div');
+    actions.className = 'header-actions';
+    const searchIcon = document.createElement('span');
+    searchIcon.className = 'search-icon';
+    searchIcon.textContent = '🔍'; 
+    const loginBtn = document.createElement('button');
+    loginBtn.className = 'btn-outline';
+    loginBtn.textContent = 'Увійти';
+    actions.appendChild(searchIcon);
+    actions.appendChild(loginBtn);
+
+    // Стрілка для мобільного меню
+    const mobileMenuToggle = document.createElement('div');
+    mobileMenuToggle.className = 'mobile-menu-toggle';
+    const chevron = document.createElement('span');
+    chevron.className = 'chevron';
+    mobileMenuToggle.appendChild(chevron);
+
+    // Створюємо саме мобільне меню
+    const mobileMenu = document.createElement('div');
+    mobileMenu.className = 'mobile-menu';
+    const mLink1 = link1.cloneNode(true);
+    const mLink2 = link2.cloneNode(true);
+    mobileMenu.appendChild(mLink1);
+    mobileMenu.appendChild(mLink2);
+
+    // Додаємо елементи до шапки
+    header.appendChild(nav);
+    header.appendChild(logoDiv);
+    header.appendChild(actions);
+    header.appendChild(mobileMenuToggle); // Додаємо перемикач
+    
+    // Додаємо шапку та меню до контейнера
+    container.appendChild(header);
+    container.appendChild(mobileMenu);
+
+    // Логіка перемикання меню
+    mobileMenuToggle.addEventListener('click', () => {
+        header.classList.toggle('mobile-menu-active');
+        mobileMenu.classList.toggle('active');
+    });
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navbar = document.querySelector('.navbar');
+
+    if (mobileToggle && navbar) {
+        mobileToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    }
+});
