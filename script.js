@@ -145,12 +145,21 @@ function createHeader() {
     });
 }
 document.addEventListener('DOMContentLoaded', () => {
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navbar = document.querySelector('.navbar');
+    // Логіка для каруселі оглядів (сайд-скролл)
+    const reviewsTrack = document.getElementById('reviewsTrack');
+    const btnLeft = document.getElementById('scrollLeftBtn');
+    const btnRight = document.getElementById('scrollRightBtn');
 
-    if (mobileToggle && navbar) {
-        mobileToggle.addEventListener('click', () => {
-            navbar.classList.toggle('active');
+    if (reviewsTrack && btnLeft && btnRight) {
+        btnRight.addEventListener('click', () => {
+            // Визначаємо ширину однієї картки + проміжок (gap)
+            const cardWidth = reviewsTrack.querySelector('.full-review-card').offsetWidth + 20; 
+            reviewsTrack.scrollLeft += cardWidth;
+        });
+
+        btnLeft.addEventListener('click', () => {
+            const cardWidth = reviewsTrack.querySelector('.full-review-card').offsetWidth + 20;
+            reviewsTrack.scrollLeft -= cardWidth;
         });
     }
 });

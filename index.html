@@ -52,42 +52,52 @@
             <button id="scrollBtn" class="btn-outline">Завантажити ще огляди ↓</button>
         </div>
 
-        <section id="more-reviews" class="more-games">
-            <h2 class="fade-in">Останні огляди</h2>
-            
-            <div class="latest-carousel-wrapper fade-in">
-                <div class="latest-carousel-track" id="latestCarouselTrack">
-                    
-                    <div class="latest-review-card">
-                        <div class="img-placeholder" style="background-image: url('images/The_Witcher.jpg');"></div>
-                        <div class="latest-review-text">
-                            <h3>Відьмак 3: Дикий Гін (Next-Gen)</h3>
-                            <p>Оновлена класика з неймовірною графікою.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="latest-review-card">
-                        <div class="img-placeholder" style="background-image: url('images/STALKER_2.jpg');"></div>
-                        <div class="latest-review-text">
-                            <h3>S.T.A.L.K.E.R. 2: Серце Чорнобиля</h3>
-                            <p>Наймасштабніше повернення в Зону. Попередній погляд.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="latest-review-card">
-                        <div class="img-placeholder" style="background-image: url('images/Baldurs_Gate_III.png');"></div>
-                        <div class="latest-review-text">
-                            <h3>Baldur's Gate 3</h3>
-                            <p>Гра року, яка перевернула жанр RPG.</p>
-                        </div>
-                    </div>
-
+       <section id="more-reviews" class="more-games">
+    <div class="section-header fade-in">
+        <h2>ОСТАННІ ОГЛЯДИ</h2>
+        <a href="reviews.html" class="view-all-link">УСІ ОГЛЯДИ &rarr;</a>
+    </div>
+    
+    <div class="carousel-wrapper fade-in">
+        <button class="carousel-btn left-btn" id="scrollLeftBtn">&#10094;</button>
+        
+        <div class="carousel-track" id="reviewsTrack">
+            <div class="full-review-card" style="background-image: url('images/cyberpunk.jpg');">
+                <div class="card-gradient-overlay">
+                    <div class="card-rating">★ 9.8</div>
+                    <h2 class="card-title">Cyberpunk 2077: Phantom Liberty</h2>
+                    <p class="card-desc">Неймовірне доповнення, яке повністю змінює гру та додає шпигунський трилер у Найт-Сіті.</p>
                 </div>
-
-                <div class="carousel-click-zone zone-left" id="zoneLeft"></div>
-                <div class="carousel-click-zone zone-right" id="zoneRight"></div>
             </div>
-        </section>
+            
+            <div class="full-review-card" style="background-image: url('images/The_Witcher.jpg');">
+                <div class="card-gradient-overlay">
+                    <div class="card-rating">★ 10</div>
+                    <h2 class="card-title">Відьмак 3: Дикий Гін</h2>
+                    <p class="card-desc">Класика від CD Projekt Red. Обов'язково до проходження для кожного фаната RPG.</p>
+                </div>
+            </div>
+            
+            <div class="full-review-card" style="background-image: url('images/STALKER_2.jpg');">
+                <div class="card-gradient-overlay">
+                    <div class="card-rating">★ 9.5</div>
+                    <h2 class="card-title">S.T.A.L.K.E.R. 2: Серце Чорнобиля</h2>
+                    <p class="card-desc">Наймасштабніше повернення в Зону. Попередній погляд на головний шутер.</p>
+                </div>
+            </div>
+            
+            <div class="full-review-card" style="background-image: url('images/Baldurs_Gate_III.png');">
+                <div class="card-gradient-overlay">
+                    <div class="card-rating">★ 9.9</div>
+                    <h2 class="card-title">Baldur's Gate 3</h2>
+                    <p class="card-desc">Гра року, яка перевернула жанр RPG і встановила нові стандарти для індустрії.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-btn right-btn" id="scrollRightBtn">&#10095;</button>
+    </div>
+</section>
 
         <section class="newsletter fade-in">
             <h2>Не пропусти жодного <span class="highlight-blue">кадру.</span></h2>

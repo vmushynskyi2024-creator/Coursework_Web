@@ -585,6 +585,147 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+/* --- Шапка секції (Заголовок + Посилання) --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 5%;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.view-all-link {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+    color: var(--primary-purple);
+}
+
+/* --- Обгортка каруселі --- */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+/* --- Трек для скролу --- */
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    padding-bottom: 15px; 
+    width: 100%;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; 
+}
+
+/* --- Налаштування карток всередині каруселі --- */
+.carousel-track .full-review-card {
+    flex: 0 0 calc(33.333% - 13.4px); 
+    scroll-snap-align: start;
+    height: 350px;
+    border-radius: 12px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Якщо цих стилів ще немає в style.css глобально: */
+.card-gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-rating {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary-purple);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-weight: 800;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* --- Кнопки скролу --- */
+.carousel-btn {
+    background-color: var(--btn-dark);
+    color: var(--text-main);
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-purple);
+    border-color: var(--primary-purple);
+}
+
+/* Позиціонування кнопок по краях */
+.left-btn { left: 1%; }
+.right-btn { right: 1%; }
+
+/* --- Адаптивність --- */
+@media (max-width: 992px) {
+    .carousel-track .full-review-card {
+        flex: 0 0 calc(50% - 10px); /* 2 картки на планшеті */
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-track .full-review-card {
+        flex: 0 0 100%; /* 1 картка на телефоні */
+    }
+    .left-btn, .right-btn {
+        display: none; /* На телефоні зручніше гортати пальцем (свайпом) */
+    }
+}
 
 /* АДАПТАЦІЯ ПІД МОБІЛКИ */
 @media (max-width: 768px) {
