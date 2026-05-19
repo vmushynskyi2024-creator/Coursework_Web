@@ -138,8 +138,8 @@ a {
 
 .main-game-card {
     width: 100%;
-    max-width: 500px;
-    height: 320px;
+    max-width: 650px;
+    height: 420px;
     background-color: #222; /* Фоновий колір, якщо картинка не завантажиться */
     background-position: center;
     background-size: cover;
@@ -626,18 +626,19 @@ footer {
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
-    padding-bottom: 15px; 
+    scrollbar-width: none; /* Приховуємо скроллбар для Firefox */
+    -ms-overflow-style: none; /* Приховуємо скроллбар для IE/Edge */
+    padding-bottom: 15px; /* Місце під тіні (якщо є) */
     width: 100%;
 }
 
 .carousel-track::-webkit-scrollbar {
-    display: none; 
+    display: none; /* Приховуємо скроллбар для Chrome/Safari */
 }
 
 /* --- Налаштування карток всередині каруселі --- */
 .carousel-track .full-review-card {
+    /* Робимо рівно 3 картки на екрані. Віднімаємо gap (20px * 2) / 3 */
     flex: 0 0 calc(33.333% - 13.4px); 
     scroll-snap-align: start;
     height: 350px;
@@ -710,6 +711,22 @@ footer {
 /* Позиціонування кнопок по краях */
 .left-btn { left: 1%; }
 .right-btn { right: 1%; }
+
+/* --- Адаптивність --- */
+@media (max-width: 992px) {
+    .carousel-track .full-review-card {
+        flex: 0 0 calc(50% - 10px); /* 2 картки на планшеті */
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-track .full-review-card {
+        flex: 0 0 100%; /* 1 картка на телефоні */
+    }
+    .left-btn, .right-btn {
+        display: none; /* На телефоні зручніше гортати пальцем (свайпом) */
+    }
+}
 
 /* --- Адаптивність --- */
 @media (max-width: 992px) {
