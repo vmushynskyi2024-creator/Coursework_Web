@@ -78,8 +78,8 @@ a {
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 500px;
+    flex: 1.5; 
+    max-width: 650px; 
 }
 
 .badge {
@@ -93,22 +93,26 @@ a {
     margin-bottom: 15px;
 }
 
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 800;
-    margin: 10px 0 20px 0;
-    line-height: 1.1;
+.hero-content h1 {
+    font-size: 56px; /* Залишаємо великим та потужним */
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    width: 100%; /* Змушуємо використовувати всю доступну ширину */
 }
-
 .highlight {
     color: var(--primary-purple);
     font-family: cursive;
 }
 
-.hero p {
+.hero-content p {
+    font-size: 16px; /* Збільшуємо шрифт, щоб він краще читався */
+    line-height: 1.6;
     color: var(--text-muted);
-    margin-bottom: 30px;
-    font-size: 15px;
+    max-width: 520px; /* Дозволяємо опису також стати трохи ширшим */
+    margin-bottom: 35px;
 }
 
 .hero-buttons a {
@@ -547,12 +551,24 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: flex-start;
     gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .footer-info {
-    max-width: 300px;
+    flex: 1.5; 
+    min-width: 280px;
+}
+
+.footer-info p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 100%; 
+    margin-bottom: 20px;
 }
 
 .social-links {
@@ -564,14 +580,36 @@ footer {
 
 .footer-links {
     display: flex;
-    gap: 50px;
+    flex: 2; 
+    justify-content: space-around; 
+    gap: 40px;
+}
+
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 160px; 
+}
+
+.link-column h4 {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+    color: var(--text-main);
 }
 
 .link-column a {
-    display: block;
+    font-size: 15px;
     color: var(--text-muted);
-    margin-bottom: 10px;
-    font-size: 14px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.link-column a:hover {
+    color: var(--primary-purple);
 }
 
 /* Анімації JS */
@@ -742,6 +780,21 @@ footer {
     .left-btn, .right-btn {
         display: none; /* На телефоні зручніше гортати пальцем (свайпом) */
     }
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #1a1a24; /* Акуратна тонка лінія, яка відділить копірайт */
+    text-align: center; /* Центруємо текст по середині */
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #555566; /* Робимо колір тьмянішим, щоб він не відволікав увагу */
+    letter-spacing: 0.5px;
 }
 
 /* АДАПТАЦІЯ ПІД МОБІЛКИ */
